@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        90deg,
+        #B3EBF2 0%,
+        #D8F5F9 20%,
+        #FFFFFF 50%,
+        #FCECEF 80%,
+        #F4C2CF 100%
+    );
+
+    position:relative;
+}
+
+/* Floating bubbles */
+
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+    animation:float 10s infinite ease-in-out;
+}
+
+.b1{
+    width:140px;
+    height:140px;
+    top:8%;
+    left:8%;
+}
+
+.b2{
+    width:220px;
+    height:220px;
+    bottom:8%;
+    left:10%;
+    animation-delay:2s;
+}
+
+.b3{
+    width:160px;
+    height:160px;
+    top:10%;
+    right:10%;
+    animation-delay:4s;
+}
+
+.b4{
+    width:250px;
+    height:250px;
+    bottom:5%;
+    right:5%;
+    animation-delay:1s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+/* Main card */
+
+.container{
+    z-index:10;
+    text-align:center;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(18px);
+
+    padding:50px;
+    border-radius:35px;
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.1);
+
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.heart{
+    font-size:3rem;
+    margin-bottom:15px;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+/* NCKU Logo */
+
+.ncku-logo{
+    width:130px;
+    height:auto;
+
+    margin-bottom:20px;
+
+    animation:logoFloat 4s ease-in-out infinite;
+
+    filter:
+    drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+@keyframes logoFloat{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.title{
+    font-family:'Pacifico',cursive;
+
+    font-size:4.2rem;
+
+    color:#2d3436;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,0.6);
+}
+
+/* Cards */
+
+.info{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:rgba(255,255,255,0.65);
+    padding:18px 28px;
+    border-radius:20px;
+    font-weight:600;
+    color:#444;
+    min-width:240px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:90%;
+        padding:30px;
+    }
+
+    .title{
+        font-size:2.5rem;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .ncku-logo{
+        width:100px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
+
+<div class="container">
+    <div class="heart">💙</div>
+
+    <img src="ncku-logo.png" alt="NCKU Logo" class="ncku-logo">
+
+    <h1 class="title">Happy birthday my sister! :D</h1>
+
+    <div class="info">
+        <div class="card">19/08/2008 - 19/08/2026</div>
+        <div class="card">My sister 17th birthday :D</div>
+    </div>
+</div>
+
+</body>
+</html>
