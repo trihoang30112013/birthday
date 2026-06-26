@@ -93,6 +93,7 @@
     }
 
     .container{
+        position: fixed;
 
         z-index:5;
 
@@ -111,6 +112,7 @@
         padding:50px;
 
         box-shadow:
+
         0 20px 45px rgba(0,0,0,.12);
 
         animation:fadeUp 1.3s;
@@ -151,7 +153,6 @@
 
     }
 
-
     .gift-container{
 
         display:flex;
@@ -191,12 +192,6 @@
 
     }
 
-    .hidden{
-
-        display:none;
-
-    }
-
     @keyframes pop{
 
         0%{
@@ -226,7 +221,7 @@
 
         font-family:'Pacifico',cursive;
 
-        font-size:4rem;
+        font-size: 3.5rem;
 
         color:#2d3436;
 
@@ -363,9 +358,6 @@
 
         </div>
 
-        <!-- Hidden Final Message -->
-        <div id="finalMessage" class="hidden">Thank you for always being the best sister. ❤️</div>
-
     </main>
 
     <div id="confetti-container"></div>
@@ -381,6 +373,7 @@
         let flowerOpened = false;
         let nckuOpened = false;
 
+
         function changeTitle(text){
 
             title.style.opacity = 0;
@@ -395,7 +388,7 @@
         }
 
         flowerGift.addEventListener("click",() => {
-            flowerGift.innerHTML = "🌹"
+            flowerGift.innerHTML = "💐"
             changeTitle("You're so beautiful 💖")
             flowerOpened = true;
             checkFinished();
@@ -414,11 +407,9 @@
             if(flowerOpened && nckuOpened){
 
                 setTimeout(() => {
-
-                    finalMessage.classList.remove("hidden");
-
+                    changeTitle("Thank you for always being the best sister ❤️");
+                    title.style.fontSize = "2.55rem";
                     launchConfetti();
-
                 },700);
 
             }
