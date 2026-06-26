@@ -1,243 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sister ❤️</title>
 
-<title>Happy Birthday</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    min-height:100vh;
-    overflow:hidden;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-family:'Poppins',sans-serif;
-
-    background:linear-gradient(
-        90deg,
-        #B3EBF2 0%,
-        #D8F5F9 20%,
-        #FFFFFF 50%,
-        #FCECEF 80%,
-        #F4C2CF 100%
-    );
-
-    position:relative;
-}
-
-/* Floating bubbles */
-
-.bubble{
-    position:absolute;
-    border-radius:50%;
-    background:rgba(255,255,255,0.25);
-    backdrop-filter:blur(8px);
-    animation:float 10s infinite ease-in-out;
-}
-
-.b1{
-    width:140px;
-    height:140px;
-    top:8%;
-    left:8%;
-}
-
-.b2{
-    width:220px;
-    height:220px;
-    bottom:8%;
-    left:10%;
-    animation-delay:2s;
-}
-
-.b3{
-    width:160px;
-    height:160px;
-    top:10%;
-    right:10%;
-    animation-delay:4s;
-}
-
-.b4{
-    width:250px;
-    height:250px;
-    bottom:5%;
-    right:5%;
-    animation-delay:1s;
-}
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0px);
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
     }
-    50%{
-        transform:translateY(-25px);
+
+    body{
+        min-height:100vh;
+        overflow:hidden;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        font-family:'Poppins',sans-serif;
+
+        background:linear-gradient(
+            90deg,
+            #B3EBF2 0%,
+            #D6F5FA 25%,
+            #FFFFFF 50%,
+            #FCECF2 75%,
+            #F4C2CF 100%
+        );
+
+        position:relative;
     }
-}
 
-/* Main card */
+    .bubble{
+        position:absolute;
+        border-radius:50%;
+        background:rgba(255,255,255,.28);
+        backdrop-filter:blur(10px);
 
-.container{
-    z-index:10;
-    text-align:center;
-
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(18px);
-
-    padding:50px;
-    border-radius:35px;
-
-    border:1px solid rgba(255,255,255,0.3);
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,0.1);
-
-    animation:fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(40px);
+        animation:float 10s ease-in-out infinite;
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+
+    .b1{
+        width:130px;
+        height:130px;
+        top:8%;
+        left:8%;
     }
-}
 
-.heart{
-    font-size:3rem;
-    margin-bottom:15px;
-    animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-    0%,100%{
-        transform:scale(1);
+    .b2{
+        width:210px;
+        height:210px;
+        bottom:8%;
+        left:12%;
+        animation-delay:2s;
     }
-    50%{
-        transform:scale(1.15);
+
+    .b3{
+        width:160px;
+        height:160px;
+        top:10%;
+        right:10%;
+        animation-delay:4s;
     }
-}
 
-/* NCKU Logo */
-
-.ncku-logo{
-    width:130px;
-    height:auto;
-
-    margin-bottom:20px;
-
-    animation:logoFloat 4s ease-in-out infinite;
-
-    filter:
-    drop-shadow(0 10px 20px rgba(0,0,0,0.15));
-}
-
-@keyframes logoFloat{
-    0%,100%{
-        transform:translateY(0px);
+    .b4{
+        width:250px;
+        height:250px;
+        bottom:5%;
+        right:6%;
+        animation-delay:1s;
     }
-    50%{
-        transform:translateY(-10px);
+
+    @keyframes float{
+
+        0%,100%{
+            transform:translateY(0px);
+        }
+
+        50%{
+            transform:translateY(-25px);
+        }
+
     }
-}
-
-.title{
-    font-family:'Pacifico',cursive;
-
-    font-size:4.2rem;
-
-    color:#2d3436;
-
-    margin-bottom:30px;
-
-    text-shadow:
-    0 0 20px rgba(255,255,255,0.6);
-}
-
-/* Cards */
-
-.info{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.card{
-    background:rgba(255,255,255,0.65);
-    padding:18px 28px;
-    border-radius:20px;
-    font-weight:600;
-    color:#444;
-    min-width:240px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-@media(max-width:768px){
 
     .container{
-        width:90%;
-        padding:30px;
+
+        z-index:5;
+
+        width:min(900px,90%);
+
+        text-align:center;
+
+        background:rgba(255,255,255,.18);
+
+        backdrop-filter:blur(18px);
+
+        border-radius:35px;
+
+        border:1px solid rgba(255,255,255,.35);
+
+        padding:50px;
+
+        box-shadow:
+        0 20px 45px rgba(0,0,0,.12);
+
+        animation:fadeUp 1.3s;
+    }
+
+    @keyframes fadeUp{
+
+        from{
+            opacity:0;
+            transform:translateY(40px);
+        }
+
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+    }
+
+    .heart{
+
+        font-size:3rem;
+
+        margin-bottom:25px;
+
+        animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+
+        0%,100%{
+            transform:scale(1);
+        }
+
+        50%{
+            transform:scale(1.15);
+        }
+
+    }
+
+
+    .gift-container{
+
+        display:flex;
+
+        justify-content:center;
+
+        gap:60px;
+
+        margin-bottom:30px;
+    }
+
+    .gift-box{
+
+        font-size:4rem;
+
+        cursor:pointer;
+
+        transition:.35s;
+
+        user-select:none;
+    }
+
+    .gift-box:hover{
+
+        transform:
+        translateY(-10px)
+        rotate(-8deg)
+        scale(1.12);
+
+    }
+
+    .gift-box.opened{
+
+        cursor:default;
+
+        transform:scale(1.1);
+
+    }
+
+    .hidden{
+
+        display:none;
+
+    }
+
+    @keyframes pop{
+
+        0%{
+            opacity:0;
+            transform:scale(.4);
+        }
+
+        70%{
+            transform:scale(1.15);
+        }
+
+        100%{
+            opacity:1;
+            transform:scale(1);
+        }
+
+    }
+
+    #nckuGift img{
+        width:80px;
+        height:80px;
+        object-fit:contain;
+        display:block;
     }
 
     .title{
-        font-size:2.5rem;
+
+        font-family:'Pacifico',cursive;
+
+        font-size:4rem;
+
+        color:#2d3436;
+
+        margin-bottom:35px;
+
+        text-shadow:
+        0 0 15px rgba(255,255,255,.6);
+
+        transition:.5s;
+    }
+
+    .info{
+
+        display:flex;
+
+        justify-content:center;
+
+        gap:20px;
+
+        flex-wrap:wrap;
     }
 
     .card{
-        width:100%;
+
+        min-width:240px;
+
+        padding:18px 25px;
+
+        background:rgba(255,255,255,.65);
+
+        border-radius:18px;
+
+        font-weight:600;
+
+        color:#444;
+
+        box-shadow:
+        0 8px 18px rgba(0,0,0,.08);
+
+        transition:.3s;
     }
 
-    .ncku-logo{
-        width:100px;
-    }
-}
+    .card:hover{
 
-</style>
+        transform:translateY(-5px);
+
+    }
+
+
+    #finalMessage{
+
+        margin-top:35px;
+
+        font-size:1.2rem;
+
+        color:#555;
+
+        font-weight:600;
+
+        animation:fadeIn 1s;
+    }
+
+    @keyframes fadeIn{
+
+        from{
+
+            opacity:0;
+
+        }
+
+        to{
+
+            opacity:1;
+
+        }
+
+    }
+    @media(max-width:768px){
+        .container{
+            padding:30px;
+        }
+
+        .title{
+            font-size:2.4rem;
+        }
+
+        .gift-container{
+            gap:35px;
+        }
+
+        .gift-box{
+            font-size:3rem;
+        }
+
+        .card{
+
+            width:100%;
+        }
+    }
+    </style>
 </head>
 
 <body>
+    <!-- Floating bubbles -->
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
 
-<div class="bubble b1"></div>
-<div class="bubble b2"></div>
-<div class="bubble b3"></div>
-<div class="bubble b4"></div>
+    <!-- Main Card -->
+    <main class="container">
 
-<div class="container">
-    <div class="heart">💙</div>
+        <!-- Heart -->
+        <div class="heart">💙</div>
 
-    <img src="ncku-logo.png" alt="NCKU Logo" class="ncku-logo">
+        <!-- Gifts -->
+        <div class="gift-container">
 
-    <h1 class="title">Happy birthday my sister! :D</h1>
+            <div class="gift-box" id="flowerGift">🎁</div>
 
-    <div class="info">
-        <div class="card">19/08/2008 - 19/08/2026</div>
-        <div class="card">My sister 17th birthday :D</div>
-    </div>
-</div>
+            <div class="gift-box" id="nckuGift">🎁</div>
+
+        </div>
+
+        <!-- Main Title -->
+        <h1 id="title" class="title">Happy birthday my sister! :D</h1>
+
+        <!-- Date Cards -->
+        <div class="info">
+
+            <div class="card">19/08/2008 - 19/08/2026</div>
+
+            <div class="card">My sister 17th birthday :D</div>
+
+        </div>
+
+        <!-- Hidden Final Message -->
+        <div id="finalMessage" class="hidden">Thank you for always being the best sister. ❤️</div>
+
+    </main>
+
+    <div id="confetti-container"></div>
+
+    <script>
+        const flowerGift = document.getElementById("flowerGift");
+        const nckuGift = document.getElementById("nckuGift");
+        const nckuLogo = "./ncku-logo.png";
+
+        const title = document.getElementById("title");
+        const finalMessage = document.getElementById("finalMessage");
+
+        let flowerOpened = false;
+        let nckuOpened = false;
+
+        function changeTitle(text){
+
+            title.style.opacity = 0;
+
+            setTimeout(() => {
+
+                title.innerHTML = text;
+                title.style.opacity = 1;
+
+            },300);
+
+        }
+
+        flowerGift.addEventListener("click",() => {
+            flowerGift.innerHTML = "🌹"
+            changeTitle("You're so beautiful 💖")
+            flowerOpened = true;
+            checkFinished();
+        });
+
+        nckuGift.addEventListener("click",() => {
+            nckuGift.innerHTML = `<img src="${nckuLogo}" alt="NCKU Logo">`;
+            changeTitle("You're so amazing 🌟")
+            nckuOpened = true;
+            checkFinished();
+        });
+
+
+        function checkFinished(){
+
+            if(flowerOpened && nckuOpened){
+
+                setTimeout(() => {
+
+                    finalMessage.classList.remove("hidden");
+
+                    launchConfetti();
+
+                },700);
+
+            }
+
+        }
+
+        function launchConfetti(){
+
+            const container = document.getElementById("confetti-container");
+
+            const colors = [
+                "#ff8fab",
+                "#B3EBF2",
+                "#ffd166",
+                "#FFFFFF",
+                "#cdb4db",
+                "#95d5b2"
+            ];
+
+            for(let i=0;i<120;i++){
+
+                const confetti = document.createElement("div");
+
+                confetti.style.position = "fixed";
+                confetti.style.width = "10px";
+                confetti.style.height = "10px";
+                confetti.style.borderRadius = "50%";
+
+                confetti.style.left = Math.random()*100 + "vw";
+                confetti.style.top = "-20px";
+
+                confetti.style.background =
+                    colors[Math.floor(Math.random()*colors.length)];
+
+                confetti.style.pointerEvents = "none";
+
+                confetti.style.zIndex = "999";
+
+                const duration = 3000 + Math.random()*2500;
+
+                container.appendChild(confetti);
+
+                confetti.animate([
+
+                    {
+                        transform:"translateY(0px) rotate(0deg)",
+                        opacity:1
+                    },
+
+                    {
+                        transform:`translateY(${window.innerHeight+100}px) rotate(${720*Math.random()}deg)`,
+                        opacity:0.8
+                    }
+
+                ],{
+
+                    duration:duration,
+                    easing:"ease-out"
+
+                });
+
+                setTimeout(()=>{
+                    confetti.remove();
+                },duration);
+
+            }
+
+        }
+    </script>
 
 </body>
 </html>
